@@ -12,4 +12,8 @@ Vagrant.configure("2") do |config|
     v.memory = 512
     # v.cpus = 2
   end
+
+  # Running bootstrap
+  # -----------------
+  config.vm.provision :shell, :path => "vagrant_bootstrap/bootstrap.sh"
 end
