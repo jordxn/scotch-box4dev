@@ -4,6 +4,19 @@ Scotch Box
 ## Check out the official docs at: [box.scotch.io][16]
 ## Read the article at [scotch.io][17]
 
+## Scotch Box4dev tl;dr
+
+New in Scotch Box4dev:
+
+- Simple shell provisioning, for quick upgrades of the box.
+- Added section in `Vagrant` file with memory settings and CPU numbers.
+- Added **Xdebug** with idekey for PHPSTORM.
+- Added **XMLRPC** for your XML pleasures.
+- Added **Midnight Commander**, because it's awesome.
+- Added **Java** because ES requires it.
+- Added Elasticsearch 0.90.13 because I need it for development. It is easy to change it to the newest version.
+- Changed default web application folder from `public` to `app`. 
+
 ![Scotch Box](http://scotch.io/wp-content/uploads/2014/10/banner.jpg)
 
 Scotch Box is a preconfigured Vagrant Box with a full array of LAMP Stack features to get you up and running with Vagrant in no time.
