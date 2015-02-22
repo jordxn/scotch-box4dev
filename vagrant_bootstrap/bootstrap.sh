@@ -7,7 +7,7 @@ add-apt-repository ppa:webupd8team/java
 apt-get update
 
 # PHP tools
-apt-get install -y php5-xdebug php5-xmlrpc mc oracle-java8-installer
+apt-get install -y php5-xdebug php5-xmlrpc php5-memcached memcached mc oracle-java8-installer
 
 #install java 8
 echo -e oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
