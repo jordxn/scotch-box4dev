@@ -73,6 +73,9 @@ So that's why I decided to build a Vagrant LAMP Box. The box is prepackaged and 
 - GD and Imagick
 - Mcrypt
 - Memcache and Memcached
+- xDebug (Added by jakubgg)
+- phpMyAdmin (Added By jordxn)
+- Mass hosting apache configuration (Added by jordx)
 
 ### Front End Stuff
 - NPM
@@ -88,7 +91,14 @@ So that's why I decided to build a Vagrant LAMP Box. The box is prepackaged and 
 * Download and Install VirtualBox
 * Clone the Scotch Box GitHub Repository
 * Run Vagrant Up
-* Access Your Project at  [http://192.168.33.10/][14]
+* Access Your Project at [http://192.168.33.13/][14]
+* Access your database at [http://192.168.33.13/phpmyadmin][18]
+
+## Adding more vhosts
+
+1. You can quickly add more vhosts by making a folder in like; `/hosts/project.dev/public_html`
+2. Add `192.168.33.13 project.dev` to your hosts file
+3. Goto http://project.dev/
 
 ## Basic Vagrant Commands
 
@@ -150,12 +160,12 @@ vagrant box update
 If you're like me, you prefer to develop at a domain name versus an IP address. If you want to get rid of the some-what ugly IP address, just add a record like the following example to your laptop's host file.
 
 ```bash
-192.168.33.10 whatever-i-want.local
+192.168.33.13 whatever-i-want.local
 ```
 
 Or if you want "www" to work as well, do:
 
-192.168.33.10 whatever-i-want.local www.whatever-i-want.local
+192.168.33.13 whatever-i-want.local www.whatever-i-want.local
 
 Technically you could also a Vagrant Plugin like [Vagrant Hostmanager](15) to automatically update your host file when you run Vagrant Up. However, the purpose of Scotch Box is to have as little dependencies as possible so that it's always working when you run "vagrant up".
 
@@ -186,7 +196,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  [11]: http://scotch.io/tutorials/php/getting-started-with-laravel-homestead
  [12]: https://www.vagrantup.com/downloads.html
  [13]: https://www.virtualbox.org/wiki/Downloads
- [14]: http://192.168.33.10/
+ [14]: http://192.168.33.13/
  [15]: https://github.com/smdahlen/vagrant-hostmanager
  [16]: http://box.scotch.io
  [17]: http://scotch.io/bar-talk/introducing-scotch-box-a-vagrant-lamp-stack-that-just-works
+ [18]: http://192.168.33.13/phpmyadmin
