@@ -28,6 +28,8 @@ xdebug.idekey = \"PHPSTORM\"" >> /etc/php5/apache2/php.ini
 mv /etc/phpmyadmin/apache.conf /etc/apache2/sites-available/phpmyadmin.conf
 a2ensite phpmyadmin
 
+a2enmod vhost_alias
+
 # Add another place for vhost configuration (so we can keep these in our repo)
 echo "IncludeOptional /var/www/vhosts/*.conf" >> /etc/apache2/apache2.conf
 
